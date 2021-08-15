@@ -1,4 +1,4 @@
-//const Potion = require('../lib/Potion.js');
+const Potion = require('../lib/Potion.js');
 function Potion(name) {
     this.types = ['strength', 'agility', 'health'];
     this.name = name || this.types[Math.floor(Math.random() * this.types.length)];
@@ -8,9 +8,7 @@ function Potion(name) {
     } else {
       this.value = Math.floor(Math.random() * 5 + 7);
     }
-  }
-  
-  module.exports = Potion;
+  };
 
 test('creates a random potion object', () => {
     const potion = new Potion();
@@ -21,4 +19,3 @@ test('creates a random potion object', () => {
   });
 
 module.exports = Potion;
-//10.7 quiz
