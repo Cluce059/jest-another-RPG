@@ -72,3 +72,12 @@ test('creates a player object', () => {
 
       expect(player.inventory.length).toBeLessThanOrEqual(oldCount);
   });
+ 
+  test('adds a potion to inventory', () =>{
+    const player = new Player('Dave');
+    const oldCount = player.inventory.length;
+
+    player.addPotion(new Potion());
+
+    expect(player.inventory.length).toBeGreaterThanOrEqual(oldCount);
+});
