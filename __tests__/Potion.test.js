@@ -1,6 +1,4 @@
 //const Potion = require('../lib/Potion.js');
-
-
 function Potion(name) {
     this.types = ['strength', 'agility', 'health'];
     this.name = name || this.types[Math.floor(Math.random() * this.types.length)];
